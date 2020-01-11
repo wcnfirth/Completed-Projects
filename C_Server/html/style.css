@@ -1,0 +1,92 @@
+body {
+    background-color: AntiqueWhite;
+ }
+
+ h1 {
+    color: navy;
+    margin-left: 20px;
+ }
+
+ a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 42px;
+    text-decoration: none;
+    border-right: 1px solid #bbb;
+ }
+
+nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #1c5bce;
+ }
+
+ a:hover {
+    background-color: rgb(69, 110, 245);
+ }
+
+ table {
+    background-color: lightblue;
+ }
+
+ .calendar {
+    border-collapse: collapse;
+    position: relative;
+    width: 800px;
+    height: 400px;
+    margin-left: -400px;
+    margin-top: 20px;
+    top: 25%;
+    left: 50%;
+ }
+
+ .input {
+    border-collapse: collapse;
+    position: fixed;
+    width: 400px;
+    height: 200px;
+    margin-left: -200px;
+    margin-top: -100px;
+    top: 50%;
+    left: 50%;
+ }
+
+ table tr td {
+     text-align: center;
+ }
+
+ div.LargeImage {
+     display: block;
+     position: relative;
+     margin-left: -250px;
+     margin-top: 20px;
+     top: 25%;
+     left: 50%;
+ }
+
+ img.large {
+    width: 100%;
+    max-width: 500px;
+ }
+
+ .video {
+    border-width: 0px;
+    position: relative;
+    margin-left: -200px;
+    margin-top: 20px;
+    left: 50%;
+    top: 50%;
+ }
+
+ .cell {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: gray;
+ }

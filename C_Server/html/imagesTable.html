@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title> Calendar </title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="./gifsTable.html">Gifs Table</a>
+        <a href="./imagesTable.html">Images Table</a>
+        <a href="./cgi.html">Addition Calculator</a>
+    </nav>
+    <!-- Change the large image displayed below the table -->
+    <script type="text/javascript">
+        function ShowLargeImage(name, txt) {
+            var theimage = document.getElementById("image");
+            theimage.src = name;
+            theimage.alt = txt;
+        }
+    </script>
+
+    <h1 align="center"> Hover over a cell in the table, and the image will be displayed below </h1>
+
+    <!-- Table of images and gifs -->
+    <table class="calendar" border=1>
+        <tr>
+            <th> City Skylines </th>
+            <td onmouseover="ShowLargeImage('../images/minneapolis_skyline.jpg', 'Minneapolis')">
+                <p> </p>
+                <p> Minneapolis </p>
+            </td>
+            <td onmouseover="ShowLargeImage('../images/chicago_skyline.jpg', 'Chicago')">
+                <p>  </p>
+                <p> Chicago </p>
+            </td>
+            <td onmouseover="ShowLargeImage('../images/newyork_skyline.jpg', 'New York City')">
+                <p>  </p>
+                <p> New York City </p>
+            </td>
+        </tr>
+        <tr>
+            <th> Animals </th>
+            <td onmouseover="ShowLargeImage('../images/monkey.jpg', 'Monkey')">
+                <p>  </p>
+                <p> Monkey </p>
+            </td>
+            <td onmouseover="ShowLargeImage('../images/panda.jpg', 'Panda')">
+                <p>  </p>
+                <p> Panda </p>
+            </td>
+            <td onmouseover="ShowLargeImage('../images/elephant.jpg', 'Elephant')">
+                <p>  </p>
+                <p> Elephant </p>
+            </td>
+        </tr>
+    </table>
+    <!-- Default large image displayed under the calendar.
+      It is changed when a table cell is hovered over -->
+    <div class="LargeImage">
+        <img class="large" id="image" src="../images/umn.jpg" alt="University of Minnesota">
+    </div>
+
+</html>

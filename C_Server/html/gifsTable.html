@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title> Calendar </title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="./gifsTable.html">Gifs Table</a>
+        <a href="./imagesTable.html">Images Table</a>
+        <a href="./cgi.html">Addition Calculator</a>
+    </nav>
+    <!-- Change the large image displayed below the table -->
+    <script type="text/javascript">
+        function ShowLargeImage(name, txt) {
+            var theimage = document.getElementById("image");
+            theimage.src = name;
+            theimage.alt = txt;
+        }
+    </script>
+
+    <h1 align="center"> Hover over a cell in the table, and the gif will be displayed below </h1>
+
+    <!-- Table of images and gifs -->
+    <table class="calendar" border=1>
+        <tr>
+            <th> Goldy Gopher Gifs </th>
+            <td onmouseover="ShowLargeImage('../images/goldy_headspin.gif', 'Goldy Head Spin')">
+                <p>  </p>
+                <p> Goldy Head Spin </p>
+            </td>
+            <td onmouseover="ShowLargeImage('../images/goldy_bodyslam.gif', 'Goldy Bodyslam')">
+                <p>  </p>
+                <p> Goldy Hates Badgers </p>
+            </td>
+            <td onmouseover="ShowLargeImage('../images/goldy_truck.gif', 'Goldy Touchdown')">
+                <p>  </p>
+                <p> Goldy Plays Running Back </p>
+            </td>
+        </tr>
+        <tr>
+            <th> Shaquille O'Neal Gifs </th>
+            <td onmouseover="ShowLargeImage('../images/shaq_shimmy.gif', 'Shimmy Shaq')">
+                <p> </p>
+                <p> Shaq Shimmy </p>
+            </td>
+            <td onmouseover="ShowLargeImage('../images/shaq_aaah.gif', 'Shaq Aaah')">
+                <p> </p>
+                <p> Shaq Yell </p>
+            </td>
+            <td onmouseover="ShowLargeImage('../images/shaq_woodchuck.gif', 'Shaq Nibble')">
+                <p> </p>
+                <p> Shaq Nibble </p>
+            </td>
+        </tr>
+    </table>
+    <!-- Default large image displayed under the calendar.
+      It is changed when a table cell is hovered over -->
+    <div class="LargeImage">
+        <img class="large" id="image" src="../images/umn.jpg" alt="University of Minnesota">
+    </div>
+
+</html>

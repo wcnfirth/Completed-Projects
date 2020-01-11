@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title> Calendar </title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="./gifsTable.html">Gifs Table</a>
+        <a href="./imagesTable.html">Images Table</a>
+        <a href="./cgi.html">Addition Calculator</a>
+    </nav>
+
+    <h1 align="center"> Insert two values and click 'Submit' to add them </h1>
+    <form action="../cgi-bin/adder.cgi" method=POST>
+        First Value: <input type="number" name=val1>
+        Second Value: <input type="number" name=val2>
+        <input type=submit name=add>
+    </form>
+</html>
