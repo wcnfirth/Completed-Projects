@@ -1,30 +1,21 @@
-### HANDLING CLIENT REQUESTS AND SENDING HTTP RESPONSES
+## Overview
+This is a Java servlet banking application, that must be run using a Java web server. It consists of a set of custom classes that are used to store the data for all of the Users that have created an account with the 'bank', and Java Servlets that perform different user transactions and serve the corresponding HTML to the browser.
 
+Once the user has created an account, they can do any of the following:
+..* Create bank accounts (checking, savings, or brokerage).
+..* Remove bank accounts.
+..* View bank account histories.
+..* View bank account balances.
+..* Transfer funds between bank accounts.
 
-
-Create Java objects to contain:
-Banking users with usernames and unique identifiers
-3 different types of accounts that can be added to the banking user’s object/profile (keeping in mind that a user could have more than one of the same type of account, like 2 savings accounts) that can hold funds as dollars and cents. 
-Methods to (at a minimum)
-View account history
-View account balances
-Sum all balances
-Transfer funds between accounts (also not allowing a user to transfer more from an account than they have in the account)
-Add accounts (must have a type and a name)
-Remove accounts (must have no funds in them at the time)
-Logging to show transaction state (could be used for account history)
-Think about how you want to store logging data, could be per user or could be mapped using a java.util Class to hold in a RandomAccessFile, or a logfile per user.
-Maintaining state in a Java File
-Storing objects in a Java File
-Once a transaction is complete, write new object to file
-Used on startup to bring records into memory
-
+State is maintained by storing all user account data and transaction data in a Java File, which is then used to bring all records into memory upon startup.
 
 ## HOW TO RUN
-1. Edit ./conf/httpd.conf to contain correct configuration data
-2. Run "make" (Makefile may need to be edited based on user OS)
-3. Run ./server
-4. Navigate to the URI localhost:[port] from a web browser
+1. Install and set up a Java web server, if not already done. All development and testing was performed using [Apache Tomcat 9](https://tomcat.apache.org/download-90.cgi).
+2. Download JDK 11 or a newer version, and make sure the enviornment variable JAVA_HOME is set to its filepath. Development and testing was performed using [OpenJDK 11](https://access.redhat.com/documentation/en-us/openjdk/11/html/openjdk_11_for_windows_getting_started_guide/index).
+3. Copy and paste JavaServletBankingApp.war into the Java web server. If using Tomcat 9, it will go into the '/webapps' directory.
+4. Start the Java web server.
+5. Open a web browser and navigate to localhost:[port], where 'port' is the port the Java web server is running through.
+6. Navigate to localhost:[port]/JavaServletBankingApp
 
-
-#Note: All development and testing was done on macOS, and WSL: Ubuntu
+Note: JavaServletBankingApp.war can also be imported and run in [Eclipse](https://www.eclipse.org/downloads/).
