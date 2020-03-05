@@ -10,7 +10,7 @@ Once the user has created an account, they can do any of the following:
 
 State is maintained by storing all user account data and transaction data in a Java File, which is then used to bring all records into memory upon startup.
 
-## HOW TO RUN
+## How to run
 1. Install and set up a Java web server, if not already done. All development and testing was performed using [Apache Tomcat 9](https://tomcat.apache.org/download-90.cgi).
 2. Download JDK 11 or a newer version, and make sure the enviornment variable JAVA_HOME is set to its filepath. Development and testing was performed using [OpenJDK 11](https://access.redhat.com/documentation/en-us/openjdk/11/html/openjdk_11_for_windows_getting_started_guide/index).
 3. Copy and paste JavaServletBankingApp.war into the Java web server. If using Tomcat 9, it will go into the '/webapps' directory.
