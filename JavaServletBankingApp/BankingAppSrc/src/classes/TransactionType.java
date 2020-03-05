@@ -16,14 +16,14 @@ public enum TransactionType {
       return "transfer";
     }
   };
-  
+
   public static TransactionType StringToTransactionType(String type) {
     if (type.equals("deposit") || type.equals("Deposit"))
-      return DEPOSIT; 
+      return DEPOSIT;
     if (type.equals("withdrawal") || type.equals("Withdrawal"))
-      return WITHDRAWAL; 
+      return WITHDRAWAL;
     if (type.equals("transfer") || type.equals("Transfer"))
-      return TRANSFER; 
+      return TRANSFER;
     return null;
   }
 }

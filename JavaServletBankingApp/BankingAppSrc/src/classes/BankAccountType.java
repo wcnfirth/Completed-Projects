@@ -16,14 +16,14 @@ public enum BankAccountType {
       return "brokerage";
     }
   };
-  
+
   public static BankAccountType StringToAccountType(String type) {
     if (type.equals("checking") || type.equals("Checking"))
-      return CHECKING; 
+      return CHECKING;
     if (type.equals("savings") || type.equals("Savings"))
-      return SAVINGS; 
+      return SAVINGS;
     if (type.equals("brokerage") || type.equals("Brokerage"))
-      return BROKERAGE; 
+      return BROKERAGE;
     return null;
   }
 }

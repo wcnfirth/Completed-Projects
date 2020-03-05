@@ -9,15 +9,15 @@ import java.io.Writer;
 
 public class Transaction implements Serializable {
   private static final long serialVersionUID = -4897361289054875203L;
-  
+
   TransactionType Type;
-  
+
   float Amount;
-  
+
   float ResultingBalance;
-  
+
   BankAccount Parent;
-  
+
   public Transaction(TransactionType Type, float Amount, BankAccount Parent) {
     this.Type = Type;
     this.Amount = Amount;
@@ -27,9 +27,9 @@ public class Transaction implements Serializable {
       log();
     } catch (IOException e) {
       e.printStackTrace();
-    } 
+    }
   }
-  
+
   private void log() throws IOException {
     File LogFile = this.Parent.getOwner().getLogFile();
     Writer out = new BufferedWriter(new FileWriter(LogFile, true));
@@ -37,31 +37,31 @@ public class Transaction implements Serializable {
     out.append(System.lineSeparator());
     out.close();
   }
-  
+
   public TransactionType getType() {
     return this.Type;
   }
-  
+
   public void setType(TransactionType type) {
     this.Type = type;
   }
-  
+
   public float getAmount() {
     return this.Amount;
   }
-  
+
   public void setAmount(float amount) {
     this.Amount = amount;
   }
-  
+
   public float getResultingBalance() {
     return this.ResultingBalance;
   }
-  
+
   public void setResultingBalance(float resultingBalance) {
     this.ResultingBalance = resultingBalance;
   }
-  
+
   public String toString() {
     return String.valueOf(this.Type.toString()) + "," + Float.toString(this.Amount) + "," + Float.toString(this.ResultingBalance);
   }
