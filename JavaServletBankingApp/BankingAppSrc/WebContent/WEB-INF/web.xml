@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>firth008</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <!--
+  <servlet>
+    <servlet-name>BalancesPage</servlet-name>
+    <servlet-class>BalancesPage</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>BalancesPage</servlet-name>
+    <url-pattern>/BalancesPage</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>BankAccountCreated</servlet-name>
+    <servlet-class>BankAccountCreated</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>BankAccountCreated</servlet-name>
+    <url-pattern>/BankAccountCreated</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>BankAccountDeleted</servlet-name>
+    <servlet-class>BankAccountDeleted</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>BankAccountDeleted</servlet-name>
+    <url-pattern>/BankAccountDeleted</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>CreateBankAccountPage</servlet-name>
+    <servlet-class>CreateBankAccountPage</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CreateBankAccountPage</servlet-name>
+    <url-pattern>/CreateBankAccountPage</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>DeleteBankAccountPage</servlet-name>
+    <servlet-class>DeleteBankAccountPage</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DeleteBankAccountPage</servlet-name>
+    <url-pattern>/DeleteBankAccountPage</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>HistoryPage</servlet-name>
+    <servlet-class>HistoryPage</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HistoryPage</servlet-name>
+    <url-pattern>/HistoryPage</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>HomePage</servlet-name>
+    <servlet-class>HomePage</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HomePage</servlet-name>
+    <url-pattern>/HomePage</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>LoginPage</servlet-name>
+    <servlet-class>LoginPage</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoginPage</servlet-name>
+    <url-pattern>/LoginPage</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>MakeTransactionPage</servlet-name>
+    <servlet-class>MakeTransactionPage</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MakeTransactionPage</servlet-name>
+    <url-pattern>/MakeTransactionPage</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>MakeTransferPage</servlet-name>
+    <servlet-class>MakeTransferPage</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MakeTransferPage</servlet-name>
+    <url-pattern>/MakeTransferPage</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>NewUserPage</servlet-name>
+    <servlet-class>NewUserPage</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>NewUserPage</servlet-name>
+    <url-pattern>/NewUserPage</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>TransactionCompleted</servlet-name>
+    <servlet-class>TransactionCompleted</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TransactionCompleted</servlet-name>
+    <url-pattern>/TransactionCompleted</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>TransferCompleted</servlet-name>
+    <servlet-class>TransferCompleted</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TransferCompleted</servlet-name>
+    <url-pattern>/TransferCompleted</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>UserAccountCreated</servlet-name>
+    <servlet-class>UserAccountCreated</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UserAccountCreated</servlet-name>
+    <url-pattern>/UserAccountCreated</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>ViewTransactionHistory</servlet-name>
+    <servlet-class>ViewTransactionHistory</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ViewTransactionHistory</servlet-name>
+    <url-pattern>/ViewTransactionHistory</url-pattern>
+  </servlet-mapping>
+  -->
+  
+</web-app>
