@@ -1,40 +1,24 @@
 ### HANDLING CLIENT REQUESTS AND SENDING HTTP RESPONSES
-This server is able to successfully accept and handle the requests of multiple clients
-simultaneously. It is able to do this by creating a new pthread each time a client
-connects, and handling their request in the function 'handle_request()'. From here, the
-HTTP request is parsed into a 'request_data' structure by the function 'populate_request()',
-and the config file is parsed into a 'config_data' structure by the function 'populate_config()'.
-Both of these structures are defined in the header file server.h. The actual construction
-and writing of responses to the socket is done in the file httpResponses.c. Here, there are
-functions for sending a number of different response types to the client, and for each there
-is a Simple-Response and a Full-Response version depending on the request protocol. There are
-individual helper functions for sending text files (such as html & css), graphics files, and
-hard-coded responses. There are Response functions for all 4xx and 5xx status codes (although
-some of these are not actually used by the server), in addition to a 200 OK response. These
-are all functional, and the 200 OK response works for all text/html, text/css, image/gif, and
-image/jpeg file types.
 
-### WEBSITE
-There is a simple but functional website located in the /html/ directory, in addition to the
-index.html file located in root /Lab1/ directory. The website has four pages:
-    1. index.html - A basic "homepage" containing no graphics
-    2. gifsTable.html - Contains a table, where a unique gif is displayed when the user hovers
-            their mouse over an individual cell of the table. The browser sends an HTTP Request
-            each time a different gif is displayed.
-    3. imagesTable.html - The same premise as gifsTable.html, but with jpg images instead.
-    4. cgi.html - Allows the user to input two integer values and add them together.
 
-### COMPILATION
-A makefile is included in the root directory for easy compilation. After compilation run 
-./server to start the server. Modifications may need to be made to Makefile depending on the OS.
 
-### LOG FILES
-There are two log files: access.log and error.log. All stderr output is redirected to
-error.log, and all stdout output is redirected to access.log
+Create Java objects to contain:
+Banking users with usernames and unique identifiers
+3 different types of accounts that can be added to the banking user’s object/profile (keeping in mind that a user could have more than one of the same type of account, like 2 savings accounts) that can hold funds as dollars and cents. 
+Methods to (at a minimum)
+View account history
+View account balances
+Sum all balances
+Transfer funds between accounts (also not allowing a user to transfer more from an account than they have in the account)
+Add accounts (must have a type and a name)
+Remove accounts (must have no funds in them at the time)
+Logging to show transaction state (could be used for account history)
+Think about how you want to store logging data, could be per user or could be mapped using a java.util Class to hold in a RandomAccessFile, or a logfile per user.
+Maintaining state in a Java File
+Storing objects in a Java File
+Once a transaction is complete, write new object to file
+Used on startup to bring records into memory
 
-### CGI
-The server is able to identify a CGI request and grab the query_string, but at this point
-neither CGI Get or Post are functioning. A 501 Not Implemented response if given instead.
 
 ## HOW TO RUN
 1. Edit ./conf/httpd.conf to contain correct configuration data
