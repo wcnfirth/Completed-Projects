@@ -22,7 +22,7 @@ public class NewUserPage extends HttpServlet {
     if (session.getAttribute("UserDB") == null) {
       UserDB Users = UserDB.RestoreUserDatabase(contextPath);
       session.setAttribute("UserDB", Users);
-    } 
+    }
     out.println("<html>");
     out.println("<head>");
     out.println("<meta http-equiv='pragma'  content='no-cache'>");
@@ -45,7 +45,7 @@ public class NewUserPage extends HttpServlet {
     out.println("</html>");
     out.flush();
   }
-  
+
   protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     doGet(request, response);
   }

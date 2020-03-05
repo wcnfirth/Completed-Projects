@@ -41,26 +41,26 @@ public class MakeTransferPage extends HttpServlet {
     ArrayList<BankAccount> CheckingAccounts = CurrentUser.getCheckingAccounts();
     for (BankAccount acc : CheckingAccounts) {
       if (acc.getBalance() > 0.0F)
-        out.println("<option value='" + acc.getName() + "'>(C - $" + acc.getBalance() + ") " + acc.getName() + "</option>"); 
-    } 
+        out.println("<option value='" + acc.getName() + "'>(C - $" + acc.getBalance() + ") " + acc.getName() + "</option>");
+    }
     ArrayList<BankAccount> SavingsAccounts = CurrentUser.getSavingsAccounts();
     for (BankAccount acc : SavingsAccounts) {
       if (acc.getBalance() > 0.0F)
-        out.println("<option value='" + acc.getName() + "'>(S - $" + acc.getBalance() + ") " + acc.getName() + "</option>"); 
-    } 
+        out.println("<option value='" + acc.getName() + "'>(S - $" + acc.getBalance() + ") " + acc.getName() + "</option>");
+    }
     ArrayList<BankAccount> BrokerageAccounts = CurrentUser.getBrokerageAccounts();
     for (BankAccount acc : BrokerageAccounts) {
       if (acc.getBalance() > 0.0F)
-        out.println("<option value='" + acc.getName() + "'>(B - $" + acc.getBalance() + ") " + acc.getName() + "</option>"); 
-    } 
+        out.println("<option value='" + acc.getName() + "'>(B - $" + acc.getBalance() + ") " + acc.getName() + "</option>");
+    }
     out.println("</select></td>");
     out.println("<td><select name = 'transferTo'>");
     for (BankAccount acc : CheckingAccounts)
-      out.println("<option value='" + acc.getName() + "'>(C - $" + acc.getBalance() + ") " + acc.getName() + "</option>"); 
+      out.println("<option value='" + acc.getName() + "'>(C - $" + acc.getBalance() + ") " + acc.getName() + "</option>");
     for (BankAccount acc : SavingsAccounts)
-      out.println("<option value='" + acc.getName() + "'>(S - $" + acc.getBalance() + ") " + acc.getName() + "</option>"); 
+      out.println("<option value='" + acc.getName() + "'>(S - $" + acc.getBalance() + ") " + acc.getName() + "</option>");
     for (BankAccount acc : BrokerageAccounts)
-      out.println("<option value='" + acc.getName() + "'>B - $" + acc.getBalance() + ") " + acc.getName() + "</option>"); 
+      out.println("<option value='" + acc.getName() + "'>B - $" + acc.getBalance() + ") " + acc.getName() + "</option>");
     out.println("</select></td>");
     out.println("<td><input type='number' name='transferAmount' min='0.01' step='0.01' max='9999' required /></td>");
     out.println("<td><input type='submit' value='Submit'></td>");
@@ -71,7 +71,7 @@ public class MakeTransferPage extends HttpServlet {
     out.println("</html>");
     out.flush();
   }
-  
+
   protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     doGet(request, response);
   }

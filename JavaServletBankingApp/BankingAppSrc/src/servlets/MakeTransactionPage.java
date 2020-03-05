@@ -12,13 +12,26 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+/**
+ * Serves the transaction page based on information from the classes User and BankAccount.
+ */
 @WebServlet({"/MakeTransactionPage"})
 public class MakeTransactionPage extends HttpServlet {
+
+  /**
+   * Respond to the user request.
+   */
   protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    // Set response parameters
     response.setContentType("text/HTML");
     PrintWriter out = response.getWriter();
+    // Get request data from the HttpServletRequest
     HttpSession session = request.getSession();
     User CurrentUser = (User)session.getAttribute("UserData");
+
+    /**
+     * Write the pertinent HTML response to the PrintWriter
+     */
     out.println("<html>");
     out.println("<head>");
     out.println("<meta http-equiv='pragma'  content='no-cache'>");
@@ -42,15 +55,20 @@ public class MakeTransactionPage extends HttpServlet {
     out.println("<option value='Withdrawal'>Withdrawal</option>");
     out.println("</select></td>");
     out.println("<td><select name = 'accountName' required>");
+
+    // Retrieve the CheckingAccount data for the current user (if there is any).
     ArrayList<BankAccount> CheckingAccounts = CurrentUser.getCheckingAccounts();
     for (BankAccount acc : CheckingAccounts)
-      out.println("<option value='" + acc.getName() + "'>(C - $" + acc.getBalance() + ") " + acc.getName() + "</option>"); 
+      out.println("<option value='" + acc.getName() + "'>(C - $" + acc.getBalance() + ") " + acc.getName() + "</option>");
+    // Retrieve the SavingsAccount data for the current user (if there is any).
     ArrayList<BankAccount> SavingsAccounts = CurrentUser.getSavingsAccounts();
     for (BankAccount acc : SavingsAccounts)
-      out.println("<option value='" + acc.getName() + "'>(S - $" + acc.getBalance() + ") " + acc.getName() + "</option>"); 
+      out.println("<option value='" + acc.getName() + "'>(S - $" + acc.getBalance() + ") " + acc.getName() + "</option>");
+    // Retrieve the BrokerageAccount data for the current user (if there is any).
     ArrayList<BankAccount> BrokerageAccounts = CurrentUser.getBrokerageAccounts();
     for (BankAccount acc : BrokerageAccounts)
-      out.println("<option value='" + acc.getName() + "'>(B - $" + acc.getBalance() + ") " + acc.getName() + "</option>"); 
+      out.println("<option value='" + acc.getName() + "'>(B - $" + acc.getBalance() + ") " + acc.getName() + "</option>");
+
     out.println("</select></td>");
     out.println("<td><input type='number' name='transactionAmount' min='0.01' step='0.01' max='9999' required /></td>");
     out.println("<td><input type='submit' value='Submit'></td>");
@@ -61,7 +79,10 @@ public class MakeTransactionPage extends HttpServlet {
     out.println("</html>");
     out.flush();
   }
-  
+
+  /**
+   * Performs the same function as doGet().
+   */
   protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     doGet(request, response);
   }

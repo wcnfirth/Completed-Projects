@@ -38,14 +38,14 @@ public class TransferCompleted extends HttpServlet {
       out.println("<h1>Transfer not completed - requested transfer amount $" + strTransferAmount + " is larger than the funds available in account " + transferFrom + ".</h1>");
     } else {
       out.println("<h1>Transfer not completed - funds cannot be transferred between the same account</h1>");
-    } 
+    }
     out.println("<br><br>");
     out.println("<a href='HomePage'>Return to Homepage</a>");
     out.println("</body>");
     out.println("</html>");
     out.flush();
   }
-  
+
   protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     doGet(request, response);
   }

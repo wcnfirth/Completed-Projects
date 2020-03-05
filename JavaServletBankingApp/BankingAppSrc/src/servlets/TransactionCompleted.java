@@ -40,14 +40,14 @@ public class TransactionCompleted extends HttpServlet {
       out.println("<h1>$" + strTransactionAmount + " has been successfully " + strTransactionType + " account " + accountName + ".</h1>");
     } else {
       out.println("<h1>Transaction not completed - requested withdraw amount $" + strTransactionAmount + " is larger than the funds available in account " + accountName + ".</h1>");
-    } 
+    }
     out.println("<br><br>");
     out.println("<a href='HomePage'>Return to Homepage</a>");
     out.println("</body>");
     out.println("</html>");
     out.flush();
   }
-  
+
   protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     doGet(request, response);
   }

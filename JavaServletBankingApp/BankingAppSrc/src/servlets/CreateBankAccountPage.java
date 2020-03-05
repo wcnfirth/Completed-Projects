@@ -8,11 +8,24 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+/**
+ * Serve page that allows user to create a new checking, savings, or brokerage account with an optional initial balance.
+ */
 @WebServlet({"/CreateBankAccountPage"})
 public class CreateBankAccountPage extends HttpServlet {
+
+  /**
+   * Respond to the user request.
+   */
   protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+    // Set response parameters
     response.setContentType("text/HTML");
     PrintWriter out = response.getWriter();
+
+    /**
+     * Write the pertinent HTML response to the PrintWriter
+     */
     out.println("<html>");
     out.println("<head>");
     out.println("<meta http-equiv='pragma'  content='no-cache'>");
@@ -45,9 +58,14 @@ public class CreateBankAccountPage extends HttpServlet {
     out.println("</body>");
     out.println("</html>");
     out.flush();
+
   }
-  
+
+  /**
+   * Performs the same function as doGet().
+   */
   protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     doGet(request, response);
   }
+
 }

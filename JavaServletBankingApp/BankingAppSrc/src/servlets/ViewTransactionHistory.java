@@ -45,14 +45,14 @@ public class ViewTransactionHistory extends HttpServlet {
       out.println("<td>" + t.getAmount() + "</td>");
       out.println("<td>" + t.getResultingBalance() + "</td>");
       out.println("</tr><br>");
-    } 
+    }
     out.println("</table>");
     out.println("</form>");
     out.println("</body>");
     out.println("</html>");
     out.flush();
   }
-  
+
   protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     doGet(request, response);
   }

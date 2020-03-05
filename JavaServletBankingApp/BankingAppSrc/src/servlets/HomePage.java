@@ -13,23 +13,42 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+/**
+ * Serves the homepage - just a generic homepage welcoming the current user. Also repopulates data for current user, if necessary.
+ */
 @WebServlet({"/HomePage"})
 public class HomePage extends HttpServlet {
+
+  /**
+   * Respond to the user request.
+   */
   protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+    // Set response parameters.
     response.setContentType("text/HTML");
     PrintWriter out = response.getWriter();
+
+    // Get request data from the HttpServletRequest.
     String name = request.getParameter("UserName");
     HttpSession session = request.getSession();
     UserDB Users = (UserDB)session.getAttribute("UserDB");
+
+    // Populate the UserData attribute in the current scope to that of the current user, if not already done.
     ServletContext servletContext = getServletContext();
     String contextPath = servletContext.getRealPath(File.separator);
     if (session.getAttribute("UserData") == null) {
       User CurrentUser = Users.getUser(name);
       session.setAttribute("UserData", CurrentUser);
     } 
+
+    // Get the user's name if it is an existing user logging in.
     if (name == null)
       name = ((User)session.getAttribute("UserData")).getUserName(); 
     Users.BackupUserDatabase(contextPath);
+
+    /**
+     * Write the pertinent HTML response to the PrintWriter.
+     */
     out.println("<html>");
     out.println("<head>");
     out.println("<meta http-equiv='pragma'  content='no-cache'>");
@@ -50,9 +69,14 @@ public class HomePage extends HttpServlet {
     out.println("</body>");
     out.println("</html>");
     out.flush();
+
   }
   
+  /**
+   * Performs the same function as doGet().
+   */
   protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     doGet(request, response);
   }
+
 }

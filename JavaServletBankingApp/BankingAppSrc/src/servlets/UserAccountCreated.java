@@ -25,7 +25,7 @@ public class UserAccountCreated extends HttpServlet {
     if (session.getAttribute("UserDB") == null) {
       UserDB userDB = new UserDB();
       session.setAttribute("UserDB", userDB);
-    } 
+    }
     UserDB Users = (UserDB)session.getAttribute("UserDB");
     String name = request.getParameter("UserName");
     out.println("<html>");
@@ -50,12 +50,12 @@ public class UserAccountCreated extends HttpServlet {
       out.println("<input type='text' style='display:none' name='UserName' value='" + name + "'>");
       out.println("<input type='submit' value='Go to HomePage'>");
       out.println("</form>");
-    } 
+    }
     out.println("</body>");
     out.println("</html>");
     out.flush();
   }
-  
+
   protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     doGet(request, response);
   }
