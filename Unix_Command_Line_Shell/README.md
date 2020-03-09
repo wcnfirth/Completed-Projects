@@ -10,7 +10,7 @@ This is a simple, Unix-based quasi-command line shell called 'commando'. It is l
 * wait-all            : wait for all jobs to finish
 * command arg1 ...    : non-built-in is run as a job
 
-### How to run
+## How to run
 There is a Makefile included, so the instructions are as follows:
 * navigate to the Unix_Command_Line_Shell directory
 * run the command 'make'
