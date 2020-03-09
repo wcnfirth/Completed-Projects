@@ -9,3 +9,5 @@ A Makefile is included to make compilation simple.
 ..* run ./bl-client <server_name> <client_name> to create a client called 'client-name' and connect it to server 'server_name'
 ..* messages sent by the client will now be sent to all other clients connected to 'server_name'
 Run 'make clean' afterwards to remove build files.
+
+#Note: This project was developed and tested on macOS and Ubuntu. It will not run on Windows, and may not work using WSL.
