@@ -22,6 +22,7 @@ Run 'make clean' afterwards to clean up the object files and the executable.
 ### Example output
 This is an example of what running commando will look like.
 
+~~~#
 ~~~# ./commando
 @> help
 COMMANDO COMMANDS
