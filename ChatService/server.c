@@ -182,24 +182,3 @@ int server_handle_client(server_t *server, int idx) {
    client->data_ready = 0;
    return 0;
 }
-
-/************************************ADVANCED**********************************/
-void server_tick(server_t *server) {
-
-}
-
-void server_ping_clients(server_t *server) {
-
-}
-
-void server_remove_disconnected(server_t *server, int disconnect_secs) {
-
-}
-
-void server_write_who(server_t *server) {
-
-}
-
-void server_log_message(server_t *server, mesg_t *mesg) {
-
-}
