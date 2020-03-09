@@ -1,4 +1,4 @@
-4 #include "commando.h"
+#include "commando.h"
 
 // Parse the contents of input_command so that tokens[i] will point to
 // the ith space-separated string in it. Set ntok to the number of
