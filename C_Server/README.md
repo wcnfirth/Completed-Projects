@@ -1,9 +1,3 @@
-## HOW TO RUN
-1. Edit ./conf/httpd.conf to contain correct configuration data
-2. Run "make" (Makefile may need to be edited based on user OS)
-3. Run ./server
-4. Navigate to the URI localhost:[port] from a web browser
-
 ### HANDLING CLIENT REQUESTS AND SENDING HTTP RESPONSES
 This server is able to successfully accept and handle the requests of multiple clients
 simultaneously. It is able to do this by creating a new pthread each time a client
@@ -30,7 +24,7 @@ index.html file located in root /Lab1/ directory. The website has four pages:
     3. imagesTable.html - The same premise as gifsTable.html, but with jpg images instead.
     4. cgi.html - Allows the user to input two integer values and add them together.
 
-## COMPILATION
+### COMPILATION
 A makefile is included in the root directory for easy compilation. After compilation run 
 ./server to start the server. Modifications may need to be made to Makefile depending on the OS.
 
@@ -43,3 +37,9 @@ The server is able to identify a CGI request and grab the query_string, but at t
 neither CGI Get or Post are functioning. A 501 Not Implemented response if given instead.
 
 #Note: All development and testing was done on macOS, and WSL: Ubuntu
+
+## HOW TO RUN
+1. Edit ./conf/httpd.conf to contain correct configuration data
+2. Run "make" (Makefile may need to be edited based on user OS)
+3. Run ./server
+4. Navigate to the URI localhost:[port] from a web browser
