@@ -1,20 +1,20 @@
 ## Overview
 This is a simple, Unix-based quasi-command line shell called 'commando'. It is less funtional in many ways from standard shells like bash, but has some properties that distinguish it - such as the ability to recall output for any child process. Unlike bash or other standard Linux shells, the 'jobs' (child processes) that commando starts do not show any output by default and run concurrently with the main process, which immediately returns the command prompt '>@' to the user. It will however print an update if there is a change of state for any jobs running in the background. Whereas most shells are of a waiting structure, commando is non-waiting. It also implements some custom commands, consisting of the following:
-..* help                : show list of commando commands
-..* exit                : exit the program
-..* list                : list all 'jobs' (child processes) that have been started giving information on each
-..* pause nanos secs    : pause for the given number of nanoseconds and seconds
-..* output-for int      : print the output for the given 'job' number
-..* ouput-all           : print output for all jobs
-..* wait-for int        : wait until the given job number finishes
-..* wait-all            : wait for all jobs to finish
-..* command arg1 ...    : non-built-in is run as a job
+* help                : show list of commando commands
+* exit                : exit the program
+* list                : list all 'jobs' (child processes) that have been started giving information on each
+* pause nanos secs    : pause for the given number of nanoseconds and seconds
+* output-for int      : print the output for the given 'job' number
+* ouput-all           : print output for all jobs
+* wait-for int        : wait until the given job number finishes
+* wait-all            : wait for all jobs to finish
+* command arg1 ...    : non-built-in is run as a job
 
 ### How to run
 There is a Makefile included, so the instructions are as follows:
-..* navigate to the Unix_Command_Line_Shell directory
-..* run the command 'make'
-..* run the command './commando'
+* navigate to the Unix_Command_Line_Shell directory
+* run the command 'make'
+* run the command './commando'
 Run 'make clean' afterwards to remove build files.
 
 #Note: This is a Unix-based program. It has been tested and will work on macOS, Ubuntu, and WSL: Ubuntu. It has not been tested on any other Operating Systems, and will not work on Windows unless using WSL.
