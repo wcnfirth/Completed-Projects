@@ -12,10 +12,10 @@ This is a simple, Unix-based quasi-command line shell called 'commando'. It is l
 
 ### How to run
 There is a Makefile included, so the instructions are as follows:
-..* navigate to the ChatService directory
+..* navigate to the Unix_Command_Line_Shell directory
 ..* run the command 'make'
 ..* run the command './commando'
-Run 'make clean' afterwards to clean up the object files and the executable.
+Run 'make clean' afterwards to remove build files.
 
 #Note: This is a Unix-based program. It has been tested and will work on macOS, Ubuntu, and WSL: Ubuntu. It has not been tested on any other Operating Systems, and will not work on Windows unless using WSL.
 
